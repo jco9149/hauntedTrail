@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.creepster-regular {
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+  /* For mobile: */
+  #background-video {
+    position: absolute;
+    max-height: 100vh;
+    min-height: 100vh;
+    z-index: -1;
+
+    //panning animation
+    animation: panCamera 45s linear infinite;
+
+
+
+    @keyframes panCamera {
+      0%   {transform: translateX(0);}
+      50% { transform: translateX(-68%);}
+      100% {transform: translateX(0);}
+    }
+
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #background-video {
+    position: absolute;
+    min-width: 100vw;
+    max-width: 100vw;
+    z-index: -1;
+  }
+}
+
+
